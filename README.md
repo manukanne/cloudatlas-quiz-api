@@ -8,10 +8,6 @@ This project was created as part of the MongoDB Hackathon, it is a quiz API that
   - Including Quiz submition and calulating the total and reached points 
 - Also, the project is fully covered by unit tests
 
-## Description
-
-An in-depth paragraph about your project and overview of use.
-
 ## Getting Started
 
 This project is built on top of the Python FastApi framework using the awesome cloud based MongoDB Atlas database.
@@ -97,7 +93,7 @@ After creating the environment, the access token can be obtained (for more infor
 This step is important because some endpoints require authentication.
 ## Authors
 
-Manuel Kanetscheider
+[Manuel Kanetscheider](https://dev.to/manukanne)
 
 ## License
 

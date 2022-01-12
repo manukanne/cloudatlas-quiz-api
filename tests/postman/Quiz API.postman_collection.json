@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "39cddfbb-98c1-4583-a599-7d8961ecc28b",
+		"name": "Quiz API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "GET Category",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/categories/2",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Catgeories ",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/categories?skip=0&limit=100&description=funny",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								},
+								{
+									"key": "description",
+									"value": "funny"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Programming\",\r\n    \"description\": \"A programming category\"\r\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/categories/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/categories/3",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Quizzes",
+			"item": [
+				{
+					"name": "GET Quiz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/quizzes/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Quizzes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/quizzes?categories=2&categories=3&title=Country&owner_email=john.wick@gmail.com&description=quiz",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes"
+							],
+							"query": [
+								{
+									"key": "categories",
+									"value": "2"
+								},
+								{
+									"key": "categories",
+									"value": "3"
+								},
+								{
+									"key": "title",
+									"value": "Country"
+								},
+								{
+									"key": "owner_email",
+									"value": "john.wick@gmail.com"
+								},
+								{
+									"key": "description",
+									"value": "quiz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Quiz",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Mongo DB Quiz\",\r\n    \"description\": \"A quiz about Mongo DB\",\r\n    \"categories\": [2],\r\n    \"questions\": [\r\n        {\r\n            \"title\": \"What is the prdoduct name of the new MongoDB cloud service?\",\r\n            \"answers\": [\r\n                {\r\n                    \"answer_text\": \"MongoDB Atlas\",\r\n                    \"is_correct\": true\r\n                },\r\n                {\r\n                    \"answer_text\": \"AWS MongoDB\",\r\n                    \"is_correct\": false\r\n                },\r\n                {\r\n                    \"answer_text\": \"Azure MongoDB\",\r\n                    \"is_correct\": false\r\n                },\r\n                {\r\n                    \"answer_text\": \"Google Cloud Mongo DB\",\r\n                    \"is_correct\": false\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/quizzes",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Quiz",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Country Quiz\",\r\n    \"description\": \"A quiz about countries\",\r\n    \"categories\": [2],\r\n    \"questions\": [\r\n        {\r\n            \"title\": \"What is the capital city of France?\",\r\n            \"answers\": [\r\n                {\r\n                    \"answer_text\": \"Paris\",\r\n                    \"is_correct\": true\r\n                },\r\n                {\r\n                    \"answer_text\": \"Berlin\",\r\n                    \"is_correct\": false\r\n                },\r\n                {\r\n                    \"answer_text\": \"Vienna\",\r\n                    \"is_correct\": false\r\n                },\r\n                {\r\n                    \"answer_text\": \"Las Vegas\",\r\n                    \"is_correct\": false\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/quizzes/31",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Quiz Validation",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identifier\": 29,\r\n    \"questions\": [\r\n        {\r\n            \"identifier\": 23,\r\n            \"answers\":  [\r\n                {\r\n                    \"identifier\": 79,\r\n                    \"is_correct\": true\r\n                },\r\n                 {\r\n                    \"identifier\": 80,\r\n                    \"is_correct\": false\r\n                },\r\n                 {\r\n                    \"identifier\": 81,\r\n                    \"is_correct\": false\r\n                },\r\n                 {\r\n                    \"identifier\": 82,\r\n                    \"is_correct\": false\r\n                }\r\n            ]\r\n        }\r\n    ]  \r\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/quizzes/validate",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes",
+								"validate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Quiz",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/quizzes/30",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"quizzes",
+								"30"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "POST User Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"john.wick@gmail.com\",\r\n  \"first_name\": \"John\",\r\n  \"last_name\": \"Wick\",\r\n  \"password\": \"$8QQgkkTygna8MZ7t$\"\r\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/users/signup",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User (ME)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/me",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "oauth2",
+		"oauth2": [
+			{
+				"key": "password",
+				"value": "{{password}}",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "{{username}}",
+				"type": "string"
+			},
+			{
+				"key": "grant_type",
+				"value": "password_credentials",
+				"type": "string"
+			},
+			{
+				"key": "client_authentication",
+				"value": "header",
+				"type": "string"
+			},
+			{
+				"key": "scope",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientSecret",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "clientId",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "accessTokenUrl",
+				"value": "{{api_url}}/users/token",
+				"type": "string"
+			},
+			{
+				"key": "tokenName",
+				"value": "token",
+				"type": "string"
+			},
+			{
+				"key": "redirect_uri",
+				"value": "http:/localhost",
+				"type": "string"
+			},
+			{
+				"key": "authUrl",
+				"value": "https://graph.microsoft.com",
+				"type": "string"
+			},
+			{
+				"key": "addTokenTo",
+				"value": "header",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

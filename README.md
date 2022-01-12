@@ -95,26 +95,15 @@ After importing the Postman Collection, an [environment](https://learning.postma
 
 After creating the environment, the access token can be obtained (for more information, please visit this [link](https://learning.postman.com/docs/sending-requests/authorization/#oauth-20))
 This step is important because some endpoints require authentication.
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
 Manuel Kanetscheider
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+This project is licensed under the Apache-2 permissive license - see the [Licence file](LICENSE) for details.
 
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Architecture Patterns with Python](https://www.oreilly.com/library/view/architecture-patterns-with/9781492052197/)

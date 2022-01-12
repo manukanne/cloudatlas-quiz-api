@@ -15,9 +15,7 @@ This project is built on top of the Python FastApi framework using the awesome c
 
 ### Dependencies
 
-This project is built on top of the Python FastApi framework using the awesome cloud based MongoDB Atlas database.
-
-#### Tech Stack
+#### Tech-stack
 
 - Python 3.9
 - [FastApi](https://fastapi.tiangolo.com/)
@@ -29,7 +27,7 @@ This project is built on top of the Python FastApi framework using the awesome c
 
 #### 1. Clone the git repo:
 ```
-git clone
+git clone https://github.com/manukanne/cloudatlas-quiz-api.git
 ```
 
 #### 2. Download and install Python
